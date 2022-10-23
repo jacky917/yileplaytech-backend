@@ -1,0 +1,27 @@
+project:
+  domain: http://localhost:9802
+server:
+  port: 9805
+spring:
+  profiles:
+    active: ${runProType}
+  freemarker:
+    cache: false
+    charset: UTF-8
+    suffix: .ftl
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/yileplaytech?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+#      更新或者創建數據表
+      ddl-auto: update
+#    控制台打印SQL文
+    show-sql: true
+
+#logging:
+#  config: classpath:log4j2.xml
